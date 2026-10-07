@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Pokemon {
   name: string;
@@ -41,6 +42,18 @@ export default function PokedexPage() {
 
   return (
     <main className="min-h-screen p-8 bg-slate-900 text-white">
+      <header>
+        <Link href="/">
+        <Image
+          src="/pokeapi_256.3fa72200.png" 
+          alt="Logo Pokemon"
+          width={150}
+          height={150}
+          className="mb-2 object-contain hover:opacity-80 transition cursor-pointer"
+          priority
+        />
+        </Link>
+      </header>
       <h1 className="text-3xl font-bold mb-6 text-center text-yellow-400">
         Pokédex (Gen 1 & 2)
       </h1>
