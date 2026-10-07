@@ -49,6 +49,7 @@ export default async function DetailCarte({
           ))}
         </div>
 
+        {/*Compétences*/}
         <div className="mt-6 w-full">
         <h2 className="text-xl font-bold mb-3 border-b border-slate-700 pb-1">
             Compétences / Talents
@@ -62,6 +63,25 @@ export default async function DetailCarte({
             >
                 {item.ability.name.replace('-', ' ')}
                 {item.is_hidden && <span className="text-xs text-slate-400 ml-1">(A débloquer)</span>}
+            </span>
+            ))}
+        </div>
+    </div>
+
+      {/*Statistiques*/}
+     <div className="mt-6 w-full">
+        <h2 className="text-xl font-bold mb-3 border-b border-slate-700 pb-1">
+            Statistiques
+        </h2>
+
+        <div className="flex flex-wrap gap-2 justify-center">
+            {pokemon.stats.map((item: any) => (
+            <span
+                key={item.stat.name}
+                className="bg-slate-700 text-yellow-400 px-3 py-1 rounded-lg text-sm font-semibold capitalize"
+            >
+              <span className="text-slate-400 mr-1">{item.stat.name} :</span>
+              <strong className="text-yellow-400">{item.base_stat}</strong>
             </span>
             ))}
         </div>
