@@ -13,7 +13,7 @@ export default function Home() {
         priority
       />
       <p className="text-lg text-slate-250 max-w-md mb-8">
-        Découvrez tous les Pokémon, leurs statistiques et leurs détails en direct.
+        <strong>Découvrez tous les Pokémon, leurs statistiques et leurs détails en direct. </strong>
       </p>
       
       <Link 
